@@ -19,7 +19,7 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+          <title>{`jun-yeong blog ${CMS_NAME}`}</title>
         </Head>
         <Container>
           <Intro />
@@ -31,6 +31,7 @@ export default function Index({ allPosts }: Props) {
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              strava={heroPost.strava}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -48,6 +49,7 @@ export const getStaticProps = async () => {
     'author',
     'coverImage',
     'excerpt',
+	  'strava',
   ])
 
   return {

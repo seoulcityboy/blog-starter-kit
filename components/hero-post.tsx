@@ -11,6 +11,7 @@ type Props = {
   excerpt: string
   author: Author
   slug: string
+	strava: string
 }
 
 const HeroPost = ({
@@ -20,6 +21,7 @@ const HeroPost = ({
   excerpt,
   author,
   slug,
+	strava
 }: Props) => {
   return (
     <section>
